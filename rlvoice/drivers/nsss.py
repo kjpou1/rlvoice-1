@@ -2,7 +2,6 @@ from Foundation import *
 from AppKit import NSSpeechSynthesizer
 from PyObjCTools import AppHelper
 from PyObjCTools.AppHelper import PyObjCAppHelperRunLoopStopper
-
 from ..voice import Voice
 
 class RunLoopStopper(PyObjCAppHelperRunLoopStopper):
