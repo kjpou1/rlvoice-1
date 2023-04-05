@@ -3,7 +3,6 @@ import traceback
 import weakref
 import importlib
 
-
 class DriverProxy(object):
     '''
     Proxy to a driver implementation.
@@ -46,7 +45,7 @@ class DriverProxy(object):
             else:
                 driverName = 'espeak'
         # import driver module
-        name = 'pyttsx3.drivers.%s' % driverName
+        name = 'rlvoice.drivers.%s' % driverName
         self._module = importlib.import_module(name)
         # build driver instance
         self._driver = self._module.buildDriver(weakref.proxy(self))

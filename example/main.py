@@ -1,5 +1,5 @@
-import pyttsx3
-engine = pyttsx3.init() # object creation
+import rlvoice
+engine = rlvoice.init() # object creation
 
 """ RATE"""
 rate = engine.getProperty('rate')   # getting details of current speaking rate
