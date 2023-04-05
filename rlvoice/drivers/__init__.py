@@ -1,4 +1,3 @@
-
 '''
 Utility functions to help with Python 2/3 compatibility
 '''
