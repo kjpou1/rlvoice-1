@@ -1,3 +1,5 @@
+six
+
 # see setup.py
 # rlvoice only requires `espeak` driver/library which is system-dependent
 
