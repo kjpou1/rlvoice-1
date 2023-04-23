@@ -1,6 +1,6 @@
 <b>Credits to nateshmbhat for creating the original library pyttsx3.</b>
 
-The library has been released!
+The library has been released! (It is still recommended that you build from source because the library is not always up-to-date)
 
 <h2 align="center">Offline Text To Speech (TTS) converter for Python </h2>
 
