@@ -23,7 +23,7 @@ setup(
     long_description=long_description,
     summary='Offline Text to Speech library with multi-engine support',
     author='AkulAI',
-    url='https://github.com/Akul-AI/rlvoice',
+    url='https://github.com/Akul-AI/rlvoice-1',
     author_email='akulgoelstudios@gmail.com',
     install_requires=install_requires ,
     keywords=['pyttsx' , 'ivona','pyttsx for python3' , 'TTS for python3' , 'rlvoice' ,'text to speech for python','tts','text to speech','speech','speech synthesis','offline text to speech','offline tts','gtts'],
