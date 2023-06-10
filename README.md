@@ -105,4 +105,4 @@ Feel free to wrap another text-to-speech engine for use with ``rlvoice``.
 ### Project Links :
 
 * PyPI (https://pypi.python.org)
-* GitHub (https://github.com/Akul-AI/rlvoice)
+* GitHub (https://github.com/Akul-AI/rlvoice-1)
