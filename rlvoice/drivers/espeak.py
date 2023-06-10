@@ -1,6 +1,5 @@
 import time
 import ctypes
-import io
 import wave
 import os
 from tempfile import NamedTemporaryFile
