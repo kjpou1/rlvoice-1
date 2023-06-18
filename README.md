@@ -1,16 +1,15 @@
 <b>Credits to nateshmbhat for creating the original library pyttsx3.</b>
 
-The library has been released! (It is still recommended that you build from source because the library is not always up-to-date)
-
 <h2 align="center">Offline Text To Speech (TTS) converter for Python </h2>
-
 
 `RLVoice` is a text-to-speech conversion library in Python. Unlike alternative libraries, **it works offline**.
 
 ## Installation :
 
 
-	pip install rlvoice
+	pip install git+https://github.com/Akul-AI/rlvoice-1/stable.git
+
+Keep in mind that you can use `master` instead of stable for the dev branch.
 
 > If you get installation errors , make sure you first upgrade your wheel version using :  
 `pip install --upgrade wheel`
