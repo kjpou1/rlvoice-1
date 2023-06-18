@@ -7,9 +7,7 @@
 ## Installation :
 
 
-	pip install git+https://github.com/Akul-AI/rlvoice-1/stable.git
-
-Keep in mind that you can use `master` instead of stable for the dev branch.
+	pip install rlvoice
 
 > If you get installation errors , make sure you first upgrade your wheel version using :  
 `pip install --upgrade wheel`
