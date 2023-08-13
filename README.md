@@ -1,5 +1,5 @@
 
-<b>Credits to nateshmbhat for creating the original library pyttsx3.</b>
+<b>Credits to <a href="github.com/nateshmbhat">nateshmbhat</a> for creating the original library pyttsx3.</b>
 
 <h2 align="center">Offline Text To Speech (TTS) converter for Python </h2>
 
@@ -8,7 +8,7 @@
 ## Installation :
 
 
-	pip install rlvoice
+	pip install rlvoice-1
 
 > If you get installation errors , make sure you first upgrade your wheel version using :  
 `pip install --upgrade wheel`
@@ -96,11 +96,10 @@ Full documentation is located in the ```docs``` folder.
 * sapi5
 * nsss
 * espeak
-* flite
 
 Feel free to wrap another text-to-speech engine for use with ``rlvoice``.
 
 ### Project Links :
 
-* PyPI (https://pypi.python.org)
+* PyPI (https://pypi.org/project/rlvoice-1)
 * GitHub (https://github.com/Akul-AI/rlvoice-1)
