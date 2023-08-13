@@ -18,9 +18,9 @@ with io.open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
 
 
 setup(
-    name='rlvoice',
-    packages=['rlvoice', 'rlvoice.drivers'],
-    version='1.0.1',
+    name='rlvoice-1',
+    packages=['rlvoice-1', 'rlvoice.drivers'],
+    version='1.0.0',
     description='Text to Speech (TTS) library for Python 3. Works without internet connection or delay. Supports multiple TTS engines, including Sapi5, nsss, and espeak.',
     long_description=long_description,
     summary='Offline Text to Speech library with multi-engine support',
@@ -28,7 +28,7 @@ setup(
     url='https://github.com/Akul-AI/rlvoice-1',
     author_email='akulgoelstudios@gmail.com',
     install_requires=install_requires,
-    keywords=['pyttsx' , 'ivona','pyttsx for python3' , 'TTS for python3' , 'rlvoice' ,'text to speech for python','tts','text to speech','speech','speech synthesis','offline text to speech','offline tts','gtts'],
+    keywords=['rlvoice', 'pyttsx' , 'ivona','pyttsx for python3' , 'TTS for python3' , 'rlvoice' ,'text to speech for python','tts','text to speech','speech','speech synthesis','offline text to speech','offline tts','gtts'],
     classifiers = [
           'Intended Audience :: End Users/Desktop',
           'Intended Audience :: Developers',
