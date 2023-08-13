@@ -1,0 +1,4 @@
+# Ignore Python PyPI Files
+build
+dist
+rlvoice_1.egg-info
