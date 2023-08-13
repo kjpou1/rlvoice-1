@@ -8,7 +8,7 @@ install_requires = [
     'pypiwin32; platform_system == "Windows"',
     'pywin32; platform_system == "Windows"',
     'pyobjc>=2.4; platform_system == "Darwin"',
-    'six;',
+    'six'
 ]
 
 here = os.path.abspath(os.path.dirname(__file__))
@@ -19,7 +19,7 @@ with io.open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='rlvoice-1',
-    packages=['rlvoice-1', 'rlvoice.drivers'],
+    packages=['rlvoice', 'rlvoice.drivers'],
     version='1.0.0',
     description='Text to Speech (TTS) library for Python 3. Works without internet connection or delay. Supports multiple TTS engines, including Sapi5, nsss, and espeak.',
     long_description=long_description,
