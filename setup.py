@@ -25,6 +25,7 @@ setup(
     long_description=long_description,
     summary='Offline Text to Speech library with multi-engine support',
     author='AkulAI',
+    long_description_content_type="text/markdown",
     url='https://github.com/Akul-AI/rlvoice-1',
     author_email='akulgoelstudios@gmail.com',
     install_requires=install_requires,
