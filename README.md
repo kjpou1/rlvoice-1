@@ -1,3 +1,5 @@
+[![Upload Python Package](https://github.com/Akul-AI/rlvoice-1/actions/workflows/python-publish.yml/badge.svg)](https://github.com/Akul-AI/rlvoice-1/actions/workflows/python-publish.yml)
+
 <b>Credits to nateshmbhat for creating the original library pyttsx3.</b>
 
 <h2 align="center">Offline Text To Speech (TTS) converter for Python </h2>
