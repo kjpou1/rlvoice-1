@@ -8,7 +8,7 @@ install_requires = [
     'pypiwin32; platform_system == "Windows"',
     'pywin32; platform_system == "Windows"',
     'pyobjc>=2.4; platform_system == "Darwin"',
-    'six;'
+    'six;',
 ]
 
 here = os.path.abspath(os.path.dirname(__file__))
