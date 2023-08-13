@@ -1,5 +1,5 @@
 from setuptools import setup
-import io
+import codecs
 import os
 
 # Ubuntu: sudo apt install espeak ffmpeg
@@ -13,8 +13,8 @@ install_requires = [
 
 here = os.path.abspath(os.path.dirname(__file__))
 
-with io.open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
-        long_description = '\n' + f.read()
+with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
+    long_description = "\n" + fh.read()
 
 
 setup(
