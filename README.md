@@ -13,6 +13,8 @@
 > If you get installation errors , make sure you first upgrade your wheel version using :  
 `pip install --upgrade wheel`
 
+> **DO NOT USE** `pip install rlvoice`, make sure you add the -1 next to it, or it will download the wrong package.
+
 ### Linux installation requirements : 
 
 + If you are on a linux system and if the voice output is not working , then  : 
