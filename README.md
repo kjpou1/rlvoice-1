@@ -1,3 +1,4 @@
+[![Downloads](https://static.pepy.tech/badge/rlvoice-1)](https://pepy.tech/project/rlvoice-1)
 
 <b>Credits to <a href="github.com/nateshmbhat">nateshmbhat</a> for creating the original library pyttsx3.</b>
 
