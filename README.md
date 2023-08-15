@@ -98,8 +98,9 @@ Full documentation is located in the ```docs``` folder.
 * sapi5
 * nsss
 * espeak
+* coqui_ai_tts
 
-Feel free to wrap another text-to-speech engine for use with ``rlvoice``.
+Feel free to wrap another text-to-speech engine for use with ``rlvoice-1``.
 
 ### Project Links :
 
