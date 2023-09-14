@@ -27,7 +27,7 @@ setup(
     author='AkulAI',
     long_description_content_type="text/markdown",
     url='https://github.com/Akul-AI/rlvoice-1',
-    author_email='akulgoelstudios@gmail.com',
+    author_email='akulgoel2010@gmail.com',
     install_requires=install_requires,
     keywords=['rlvoice', 'pyttsx' , 'ivona','pyttsx for python3' , 'TTS for python3' , 'rlvoice' ,'text to speech for python','tts','text to speech','speech','speech synthesis','offline text to speech','offline tts','gtts'],
     classifiers = [
