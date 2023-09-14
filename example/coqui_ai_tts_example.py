@@ -1,3 +1,5 @@
+import rlvoice
+
 engine = rlvoice.init("coqui_ai_tts")
 engine.say("this is an english text to voice test.")
 engine.runAndWait()
