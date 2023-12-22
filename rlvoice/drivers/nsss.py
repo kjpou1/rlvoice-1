@@ -1,10 +1,10 @@
 #coding:utf-8
-from Foundation import *
 from AppKit import NSSpeechSynthesizer
 from PyObjCTools import AppHelper
 from ..voice import Voice
 from objc import super
 import objc
+from Foundation import NSObject, NSTimer, NSURL
 
 def buildDriver(proxy):
     return NSSpeechDriver.alloc().initWithProxy(proxy)
@@ -113,7 +113,7 @@ class NSSpeechDriver(NSObject):
 
     @objc.python_method
     def save_to_file(self, text, filename):
-        url = Foundation.NSURL.fileURLWithPath_(filename)
+        url = NSURL.fileURLWithPath_(filename)
         self._tts.startSpeakingString_toURL_(text, url)
         import time
         time.sleep(0.1)
