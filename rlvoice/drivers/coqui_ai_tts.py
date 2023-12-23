@@ -9,7 +9,7 @@ try:
 except ImportError:
     import sys, subprocess
     print('no TTS package. installing...')
-    subprocess.run([sys.executable, '-m', 'pip', 'install', 'TTS', '-i','https://mirrors.aliyun.com/pypi/simple/'])
+    subprocess.run([sys.executable, '-m', 'pip', 'install', 'TTS'])
     from TTS.api import TTS
 
 def buildDriver(proxy):
@@ -45,18 +45,18 @@ class TTSDriver(object):
         #format: sample_width:2
         #format: channels:1
 
-        # wav是 -1.0-+1.0 转为 -32768-+32767
+        # wav is -1.0-+1.0 converted to -32768-+32767
         #wav = (wav * 32767)
-        # wav 从list转为np.array
+        # Convert wav from list to np.array
         wav = np.array(wav, dtype=np.float32)
         # wav 从-1.0-+1.0 转为 -32768-+32767
         wav = (wav * 32767).astype(np.int16)
         wav = wav.tobytes()
         
-        # list 转为bytes类型
+        # Convert list to bytes type
         #wav = np.array(wav, dtype=np.int16).tobytes()
         
-        # 播放wav
+        # play wav
         # import wave
         p = pyaudio.PyAudio()
         stream = p.open(format=p.get_format_from_width(2),
@@ -90,7 +90,6 @@ class TTSDriver(object):
             return self._tts.Volume / 100.0
         elif name == 'pitch':
             return self.pitch
-            #print("Pitch adjustment not supported when using SAPI5")
         else:
             raise KeyError('unknown property %s' % name)
 
