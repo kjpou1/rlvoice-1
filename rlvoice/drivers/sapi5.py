@@ -1,4 +1,5 @@
 import comtypes.client  # Importing comtypes.client will make the gen subpackage
+from ctypes import c_int16
 try:
     from comtypes.gen import SpeechLib  # comtypes
 except ImportError:
@@ -86,6 +87,16 @@ class SAPI5Driver(object):
                 pass
         stream.close()
         os.chdir(cwd)
+
+    def to_memory(self, text, olist):
+        stream = comtypes.client.CreateObject('SAPI.SpMemoryStream')
+        temp_stream = self._tts.AudioOutputStream
+        self._tts.AudioOutputStream = stream
+        self._tts.Speak(fromUtf8(toUtf8(text)))
+        self._tts.AudioOutputStream = temp_stream
+        data = stream.GetData()        
+        olist.append([c_int16((data[i])|data[i+1]<<8).value for i in range(0,len(data),2)])
+        stream.close()
 
     def _toVoice(self, attr):
         return Voice(attr.Id, attr.GetDescription())

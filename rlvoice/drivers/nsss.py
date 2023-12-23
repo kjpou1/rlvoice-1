@@ -4,11 +4,25 @@ from PyObjCTools import AppHelper
 from ..voice import Voice
 from objc import super
 import objc
-from Foundation import NSObject, NSTimer, NSURL
+from Foundation import NSObject, NSTimer, NSURL, NSDefaultRunLoopMode, NSRunLoop
+from PyObjCTools.AppHelper import PyObjCAppHelperRunLoopStopper
 
 def buildDriver(proxy):
     return NSSpeechDriver.alloc().initWithProxy(proxy)
 
+class RunLoopStopper(PyObjCAppHelperRunLoopStopper):
+
+    def init(self):
+        self = super(RunLoopStopper, self).init()
+        self.shouldStop = False
+        return self
+
+    def stop(self):
+        self.shouldStop = True
+        # this should go away when/if runEventLoop uses
+        # runLoop iteration
+        # if NSApp() is not None:
+        #     NSApp().terminate_(self)
 
 class NSSpeechDriver(NSObject):
     @objc.python_method
@@ -33,7 +47,20 @@ class NSSpeechDriver(NSObject):
     def startLoop(self):
         NSTimer.scheduledTimerWithTimeInterval_target_selector_userInfo_repeats_(
             0.0, self, 'onPumpFirst:', None, False)
-        AppHelper.runConsoleEventLoop()
+        runLoop = NSRunLoop.currentRunLoop()
+        stopper = RunLoopStopper.alloc().init()
+        PyObjCAppHelperRunLoopStopper.addRunLoopStopper_toRunLoop_(stopper, runLoop)
+        try:
+
+            while stopper.shouldRun():
+                nextfire = runLoop.limitDateForMode_(NSDefaultRunLoopMode)
+                if not stopper.shouldRun():
+                    break
+                if not runLoop.runMode_beforeDate_(NSDefaultRunLoopMode, nextfire):
+                    stopper.stop()
+
+        finally:
+            PyObjCAppHelperRunLoopStopper.removeRunLoopStopperFromRunLoop_(runLoop)
 
     def endLoop(self):
         AppHelper.stopEventLoop()
@@ -114,9 +141,9 @@ class NSSpeechDriver(NSObject):
     @objc.python_method
     def save_to_file(self, text, filename):
         url = NSURL.fileURLWithPath_(filename)
-        self._tts.startSpeakingString_toURL_(text, url)
         import time
-        time.sleep(0.1)
+        self._tts.startSpeakingString_toURL_(text, url)
+        time.sleep(max(1, len(text) * 0.01))
         # needed so script doesn't end w/o talking
         while self._tts.isSpeaking():
             time.sleep(0.1)
