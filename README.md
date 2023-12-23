@@ -26,6 +26,16 @@
 	sudo apt update && sudo apt install espeak ffmpeg libespeak1
 	```
 
+### OS X installation requirements : 
+
++ If you are on a MacOS system and if you get an error such as `NameError: name 'objc' is not defined. Did you mean: 'object'?` , then  : 
+
+	Install the `pyobjc` library as shown below: 
+
+	```
+	pip install pyobjc==9.0.1
+	```
+
 
 ## Features : 
 
